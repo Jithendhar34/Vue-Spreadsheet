@@ -4,14 +4,14 @@
 
     <div class="controls">
       <label class="upload-btn">
-        ⬆ Upload File
+        Upload File
         <input type="file" @change="handleFile" hidden />
       </label>
-      <button @click="addRow">➕ Add Row</button>
-      <button @click="addColumn">➕ Add Column</button>
-      <button @click="deleteRow">🗑 Delete Last Row</button>
-      <button @click="deleteColumn">🗑 Delete Last Column</button>
-      <button @click="downloadFile">⬇ Download File</button>
+      <button @click="addRow">Add Row</button>
+      <button @click="addColumn">Add Column</button>
+      <button @click="deleteRow">Delete Last Row</button>
+      <button @click="deleteColumn">Delete Last Column</button>
+      <button @click="downloadFile">Download File</button>
     </div>
 
     <table v-if="tableData.length && tableData[0].length">
@@ -57,7 +57,6 @@ export default {
     if (saved) {
       this.tableData = JSON.parse(saved);
     } else {
-      // start with 1 empty header row
       this.tableData = [[""]];
     }
   },
